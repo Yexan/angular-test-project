@@ -1,0 +1,39 @@
+:host
+  display: grid
+  grid-template-columns: 350px 1fr
+  grid-template-rows: 50px 1fr
+  grid-gap: 1rem
+  grid-template-areas: "header header" "sidebar main"
+  height: 100%
+
+header
+  grid-area: header
+  padding: 1rem
+  text-align: center
+  background-color: #222
+
+  h1
+    color: #fff
+    font-size: 1rem
+    font-weight: 600
+
+
+.notes--list
+  grid-column: sidebar
+  padding: 1rem
+  background-color: #444
+
+.notes--content
+  grid-column: main
+  padding: 1rem
+  background-color: #888
+
+  h2
+    margin: 15px 0 25px
+
+
+.note--header
+  display: flex
+  align-items: center
+  justify-content: space-between
+
