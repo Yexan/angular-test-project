@@ -1,4 +1,4 @@
-import { Note } from "../shared/type/note"
+import { Note } from "../shared/model/note"
 
 /**
  * I used https://www.random.org/testimonials/selection-sampling

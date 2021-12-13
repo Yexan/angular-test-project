@@ -1,16 +1,27 @@
 <header><h1>Note app</h1></header>
 
 <section class="notes--list">
-  List component
+  <div *ngFor="let note of notes" class="note-link">
+    <span (click)="selectNote(note)">{{note.title}}</span>
+    <span (click)="deleteNote(note)" class="delete-note">X</span>
+  </div>
+  <button (click)="addNewNote()">Add a Note</button>
 </section>
 
 <section class="notes--content">
-  <div class="note--header">
-    <div class="note--header--date">17 Nov</div>
-    <div class="note--header--controls">Next - Prev</div>
-  </div>
-  <div class="note--content">
-    <h2>Note Title</h2>
-    Note content
-  </div>
+  <ng-container *ngIf="currentNote">
+    <div class="note--header" *ngIf="currentNote">
+      <div class="note--header--date">{{ currentNote.creationDate }}</div>
+      <div class="note--header--controls">
+        <span (click)="displayNextNote()">Next</span> - <span (click)="displayPreviousNote()">Prev</span>
+      </div>
+    </div>
+    <div class="note--content" *ngIf="currentNote">
+      <h2>{{ currentNote.title }}</h2>
+      {{ currentNote.content }}
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!currentNote">
+    Please select note or create a new one
+  </ng-container>
 </section>
