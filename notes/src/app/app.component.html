@@ -10,13 +10,13 @@
 
 <section class="notes--content">
   <ng-container *ngIf="currentNote">
-    <div class="note--header" *ngIf="currentNote">
+    <div class="note--header">
       <div class="note--header--date">{{ currentNote.creationDate }}</div>
       <div class="note--header--controls">
         <span (click)="displayNextNote()">Next</span> - <span (click)="displayPreviousNote()">Prev</span>
       </div>
     </div>
-    <div class="note--content" *ngIf="currentNote">
+    <div class="note--content">
       <h2>{{ currentNote.title }}</h2>
       {{ currentNote.content }}
     </div>

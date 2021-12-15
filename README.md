@@ -1,5 +1,12 @@
 # angular-test-project
 
+
+EDIT : 
+
+On this branch I did an exemple of the approach with BehaviorSubject but I didn't took the time to make components for the list and the note display yet.
+
+---
+
 Hello 😊
 
 This is the beginning of a small Notes app
